@@ -1,7 +1,9 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -25,7 +27,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,7 +44,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="container flex bg-gray-900">
+      <div className="bg-gray-800 p-4 flex flex-col">
+        <NavLink to="/dashboard/edit/personal-info" style={({isActive, isPending}) => ({color: isActive ? "red":"blue"})}>Dashboard</NavLink>
+        <NavLink to="/dashboard/edit/finances" style={({isActive, isPending}) => ({color: isActive ? "red":"blue"})}>Finances</NavLink>
+
+        <Link to="routes/dashboard"></Link>
+      </div>
+      <div className="bg-gray-600 p-4">
+        <Outlet />
+      </div>
+    </div>
+  )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
