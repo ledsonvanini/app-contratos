@@ -24,6 +24,10 @@
   width: 270px;
   border-right: var(--bdr);
 }
+@utility sideOpen {
+  background-color: var(--bg-side-800);  
+  padding-left: 1rem;
+}
 
 .item-side {
   display: flex;
