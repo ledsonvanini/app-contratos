@@ -1,8 +1,21 @@
-import { type RouteConfig, index, prefix, route } from "@react-router/dev/routes";
+import { type RouteConfig, 
+    index, 
+    prefix, 
+    route } from "@react-router/dev/routes";
 
-export default [index("routes/home.tsx"),
-route("cadastro-dados", "routes/cadastro-dados.tsx"),
-route("cadastro-fornecedor", "routes/cadastro-fornecedor.tsx"),
+export default [
+    index("routes/home.tsx"),
+    route("cadastro-dados", "routes/cadastro-gms/cadastro-dados.tsx"),
+    route("cadastro-fornecedor", "routes/cadastro-gms/cadastro-fornecedor.tsx"),
+
+    ...prefix("cadastro-gms", [
+        route("novo-cadastro", "routes/cadastro-gms/novo-cadastro.tsx"),
+        route("finalizar-cadastro", "routes/cadastro-gms/finalizar-cadastro.tsx"),
+    ]),
+
+] satisfies RouteConfig;
+
+
 
 // Nested Routes
 // route("dashboard", "routes/dashboard.tsx", [
@@ -16,4 +29,4 @@ route("cadastro-fornecedor", "routes/cadastro-fornecedor.tsx"),
 //         route("personal-info", "routes/personal-info.tsx"),
 //     ])
 // ])
-] satisfies RouteConfig;
+

@@ -11,7 +11,7 @@ function Sidebar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleSetIsOpen = (e: any) => {
-    if (e.target === e.currentTarget) {
+    if (e.target.classList.contains("openCadGMS")) {
       setIsOpen(!isOpen);
     } else {
       setIsOpen(false);
@@ -28,16 +28,16 @@ function Sidebar() {
       <div className="flex flex-col sidebar">
         <ItemSidebar >
         <IoDocumentsOutline />
-          <NavLink to="/"
+          <div className="openCadGMS"
             onClick={handleSetIsOpen}
-          > Cadastro GMS </NavLink>
+          > Cadastro GMS </div>
         </ItemSidebar>
         {isOpen && (
 
           <div className="flex flex-col sidebar sideOpen">
             <ItemSidebar >
               <IoDocument />
-              <NavLink to="/"
+              <NavLink to="/cadastro-gms/novo-cadastro"
                
               >
                 Novo Cadastro 
@@ -45,10 +45,10 @@ function Sidebar() {
             </ItemSidebar>
             <ItemSidebar >
             <MdEditDocument />
-              <NavLink to="/"
+              <NavLink to="/cadastro-gms/finalizar-cadastro"
 
               > 
-              Cadastro em Andamento
+              Finalizar Cadastro
                </NavLink>
             </ItemSidebar>
           </div>

@@ -8,5 +8,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <h3>Sem componentes2...</h3>;
+  return <h3>Página Inicial</h3>;
 }

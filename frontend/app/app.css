@@ -18,6 +18,7 @@
   --rad-card: 1rem;
 }
 
+
 @utility sidebar {
   background-color: var(--bg-side-500);
   color: var(--text-base); 
