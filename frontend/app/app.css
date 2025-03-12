@@ -10,12 +10,15 @@
 
     --bdr: 1px solid rgba(0,0,0,.4);
 
-  --bg-side-500: #526299;
-  --bg-side-800: #334377;
-  --p-card: 1rem;
-  --py-card: 1rem;
-  --px-card: 1rem;
-  --rad-card: 1rem;
+    --bg-page-content: #E8E8E8;
+    --bg-page-content: #E8E8E8;
+
+    --bg-side-500: #526299;
+    --bg-side-800: #334377;
+    --p-card: 1rem;
+    --py-card: 1rem;
+    --px-card: 1rem;
+    --rad-card: 1rem;
 }
 
 
@@ -45,14 +48,19 @@
 .item-side:active {
   background-color: var(--bg-side-800);   
 }
-
+.page-content {
+  background-color: var(--bg-page-content);
+}
+.page-content {
+  background-color: var(--bg-page-content);
+}
 
 html,
 body {
   @apply bg-white dark:bg-gray-950;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+  @media (prefers-color-scheme: light) {
+    color-scheme: light;
   }
 }
  

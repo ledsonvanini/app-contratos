@@ -16,11 +16,7 @@ function Sidebar() {
     } else {
       setIsOpen(false);
     }
-  }
-
-  // const handleIsOpenOnFocus = () => {
-  //   if(!isOpen) handleSetIsOpen()
-  // }
+  } 
 
   return (
     <div className="items-start sidebar flex flex-col">
@@ -37,7 +33,7 @@ function Sidebar() {
           <div className="flex flex-col sidebar sideOpen">
             <ItemSidebar >
               <IoDocument />
-              <NavLink to="/cadastro-gms/novo-cadastro"
+              <NavLink to="/contrato/novo-cadastro"
                
               >
                 Novo Cadastro 
@@ -45,7 +41,7 @@ function Sidebar() {
             </ItemSidebar>
             <ItemSidebar >
             <MdEditDocument />
-              <NavLink to="/cadastro-gms/finalizar-cadastro"
+              <NavLink to="/contrato/finalizar-cadastro"
 
               > 
               Finalizar Cadastro

@@ -1,9 +1,7 @@
 import {
   isRouteErrorResponse,
-  Link,
   Links,
   Meta,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -12,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import Sidebar from "./components/sidebar/sidebar";
+import Topbar from "./components/topbar";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -45,11 +44,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const date = new Date()
   return (
-    <div className=" flex h-dvh">
-      <Sidebar/>
-      <div className="bg-gray-600 p-4 w-full">
+    <div className=" flex w-full h-dvh fixed top-0 ">
+      <Sidebar />
+      <div className="bg-gray-100 w-full">
+        <Topbar />    
+        <div className="overflow">
         <Outlet />
+        </div>
       </div>
     </div>
   )

@@ -1,12 +1,13 @@
+import LabelTopForm from "~/components/forms/label-top-form";
 
 
-const FinalizarCadastro = ({children}:any) => {
-    return (
-        <div className="flex gap-2 p-4">  
-           FinalizarCadastro...
-        </div>
-    )
-}
-
+function FinalizarCadastro() {
+    const currentYear = new Date().getFullYear()
+   
+  return (
+    <div className="w-full flex m-0">
+        <LabelTopForm  title="FINALIZAR CADASTRO" currentYear={currentYear.toLocaleString()}/>
+    </div>
+ )
+} 
 export default FinalizarCadastro;
-
