@@ -1,14 +1,15 @@
-import FormCadDados from "~/components/forms/cad-dados/form-cadastro-dados";
 import LabelStatusForm from "~/components/forms/label-status-form";
 import LabelTopForm from "~/components/forms/label-top-form";
+import FormPesquisa from "~/components/forms/pesquisa/form-pesquisa";
 
-function CadastroDados() {
+function PesquisaContrato() {
+
   const currentYear = new Date() 
 
   return (
     <div className="flex flex-col gap-2 h-dvh ">
-        <LabelTopForm title="Cadastro de Dados" currentYear={currentYear.getFullYear().toLocaleString()} />
-        <FormCadDados />
+        <LabelTopForm title="Pesquisar Contrato" currentYear={currentYear.getFullYear().toLocaleString()} />
+        <FormPesquisa />
         <span className="fixed bottom-0 w-[87%] p-0">
             <LabelStatusForm status="atualizado 5min atrás" currentYear={currentYear.toLocaleString()} />
         </span>
@@ -16,4 +17,4 @@ function CadastroDados() {
 ) 
 }
 
-export default CadastroDados;
+export default PesquisaContrato;

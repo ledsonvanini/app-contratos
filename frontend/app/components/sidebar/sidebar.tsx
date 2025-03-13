@@ -1,7 +1,7 @@
 import { IoDocument, IoDocumentsOutline } from "react-icons/io5"
 import ItemSidebar from "./item-sidebar"
 import { GrDocumentStore } from "react-icons/gr"
-import { FaUserPlus } from "react-icons/fa"
+import { FaSearch, FaUserPlus } from "react-icons/fa"
 import LogoSesp from "../logo"
 import { NavLink } from "react-router"
 import { useState } from "react"
@@ -62,6 +62,13 @@ function Sidebar() {
         <NavLink to="/cadastro-fornecedor"
          onClick={handleSetIsOpen}
         > Cadastro Fornecedor </NavLink>
+
+      </ItemSidebar>
+      <ItemSidebar >
+        <FaSearch />
+        <NavLink to="/pesquisa-contrato"
+         onClick={handleSetIsOpen}
+        > Pesquisar </NavLink>
 
       </ItemSidebar>
     </div>

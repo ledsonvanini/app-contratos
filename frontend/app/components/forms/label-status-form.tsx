@@ -7,7 +7,7 @@ type TopFormProp = {
 
 function LabelStatusForm({ status, currentYear }: TopFormProp) {
     return (
-        <div className="bg-gray-300 flex w-full items-center justify-between py-2 px-6 text-2xl font-semibold">
+        <div className="bg-gray-300 flex w-full items-center justify-between px-6 text-sm font-semibold py-1 my-0">
             <p>{status}</p>
             <p  className="px-10">
                 {currentYear}

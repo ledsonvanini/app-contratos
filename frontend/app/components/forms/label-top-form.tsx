@@ -7,9 +7,9 @@ type TopFormProp = {
 
 function LabelTopForm({ title, currentYear }: TopFormProp) {
     return (
-        <div className="bg-gray-300 flex w-full items-center justify-between py-2 px-6 text-2xl font-semibold rounded-sm">
+        <div className="bg-gray-300 flex w-full items-center justify-between py-2 px-6 text-[1.3rem] font-semibold rounded-sm">
             <p>
-                {title}
+                {title?.toUpperCase()}
             </p>
             <p  className="bg-gray-50 px-5 rounded-full">
                 {currentYear}

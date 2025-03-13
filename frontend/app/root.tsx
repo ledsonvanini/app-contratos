@@ -44,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const date = new Date()
+  
   return (
     <div className=" flex w-full h-dvh fixed top-0 ">
       <Sidebar />
