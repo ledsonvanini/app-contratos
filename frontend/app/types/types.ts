@@ -3,8 +3,9 @@ export type HTTPMethod = "get" | "post" | "put" | "delete";
 export interface FetcherInputProps {
   endpoint?: string;
   method?: HTTPMethod;
-  inputType?: string;
+  inputType?: HTMLInputElement["type"];
   placeholder?: string;
+  inputLabel?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   inputClassName?: string;
@@ -23,3 +24,17 @@ export interface FetcherFormProps {
   children: React.ReactNode;
   className?: string;
 }
+
+
+export interface FetcherSelectProps {
+  endpoint?: string;
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;  
+  labelName?: string;
+  ControlClassName?: string;
+  LabelClassName?: string;
+  selectClassName?: string;
+  optionClassName?: string;
+}
+

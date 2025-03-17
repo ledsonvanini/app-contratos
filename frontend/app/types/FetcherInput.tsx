@@ -4,12 +4,13 @@ import type { FetcherInputProps } from "./types";
 
 const FetcherInput: React.FC<FetcherInputProps> = ({
   endpoint,
-  method = "post",
+  method = "get",
   inputType = "text",
-  placeholder = "Enter value",
+  placeholder,
+  inputLabel,
   value,
   onChange,
-  inputClassName = "",
+  inputClassName,
   showButton = false,
 }) => {
   const fetcher = useFetcher();
@@ -21,14 +22,17 @@ const FetcherInput: React.FC<FetcherInputProps> = ({
     fetcher.submit(formData, { method, action: endpoint });
   }
   return (
-    <div className="flex gap-2">
+    <div className={`flex flex-col text-start gap-2 ${inputClassName}`}>
+      <div className="">
+        {inputLabel}
+      </div>
       <input
         type={inputType}
         name="data"
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className={`border p-2 rounded-md focus:ring-2 focus:ring-blue-500 ${inputClassName}`}
+        className={`bg-white/70 border-1 border-black/20  p-2 rounded-md  ${inputClassName}`}
       />
       {showButton && <button onClick={handleSubmit} className="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>}
     </div>

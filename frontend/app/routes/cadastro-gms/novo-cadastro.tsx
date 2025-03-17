@@ -8,7 +8,7 @@ import LabelTopForm from "~/components/forms/label-top-form";
 const NovoCadastro = () => {
     const currentYear = new Date()
     return (
-        <div className="flex flex-col gap-2 h-dvh ">
+        <div className="flex flex-col gap-2 h-dvh bg-gray-200 ">
             <LabelTopForm title="Novo Cadastro" currentYear={currentYear.getFullYear().toLocaleString()} />
             <FormNovoCadastro />
             <span className="fixed bottom-0 w-[87%] p-0">
